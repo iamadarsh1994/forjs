@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hey</title>
+  </head>
+  <body>
+    <h1>Chai aur JS</h1>
+    <h2>NEW HEADING FOR CHANGING IT</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+    <script>
+    //   setInterval(function(){
+    //     console.log("Adarsh", Date.now())
+    //   }, 2000)
+
+    // const sayDate = function(str){
+    //     console.log(str, Date.now())
+    // }
+    // setInterval(sayDate, 1000, "Hi")
+    
+    //     const sayDate = function(str){
+    //     console.log(str, Date.now())
+    // }
+    // const intervalId = setInterval(sayDate, 4000, "Hi")
+    // clearInterval(intervalId) 
+    const sayDate = function(){
+        console.log("Adarsh", Date.now())
+    }
+    let forInterval;  
+    
+    document.querySelector('#start').addEventListener('click', function(){
+       forInterval = setInterval(sayDate, 2000)
+    })
+
+    document.querySelector('#stop').addEventListener("click", function(){
+         clearInterval(forInterval)
+         
+    })
+    </script>
+  </body>
+</html>
+<!-- start should change the background 
+color every second -->
